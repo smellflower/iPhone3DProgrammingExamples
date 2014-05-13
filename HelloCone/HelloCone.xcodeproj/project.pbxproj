@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB8E47001919C55A0033CF59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E46FF1919C55A0033CF59 /* Foundation.framework */; };
+		DB8E47021919C55A0033CF59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E47011919C55A0033CF59 /* CoreGraphics.framework */; };
+		DB8E47041919C55A0033CF59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E47031919C55A0033CF59 /* UIKit.framework */; };
+		DB8E470A1919C55A0033CF59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB8E47081919C55A0033CF59 /* InfoPlist.strings */; };
+		DB8E470C1919C55A0033CF59 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB8E470B1919C55A0033CF59 /* main.mm */; };
+		DB8E47101919C55A0033CF59 /* DLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB8E470F1919C55A0033CF59 /* DLAppDelegate.mm */; };
+		DB8E47181919C55A0033CF59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8E47171919C55A0033CF59 /* Images.xcassets */; };
+		DB8E471F1919C55A0033CF59 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E471E1919C55A0033CF59 /* XCTest.framework */; };
+		DB8E47201919C55A0033CF59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E46FF1919C55A0033CF59 /* Foundation.framework */; };
+		DB8E47211919C55A0033CF59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E47031919C55A0033CF59 /* UIKit.framework */; };
+		DB8E47291919C55A0033CF59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB8E47271919C55A0033CF59 /* InfoPlist.strings */; };
+		DB8E472B1919C55A0033CF59 /* HelloConeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E472A1919C55A0033CF59 /* HelloConeTests.m */; };
+		DB8E47351919C6590033CF59 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E47341919C6590033CF59 /* OpenGLES.framework */; };
+		DB8E47371919C65E0033CF59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E47361919C65E0033CF59 /* QuartzCore.framework */; };
+		DB8E473A1919C69B0033CF59 /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB8E47391919C69B0033CF59 /* GLView.mm */; };
+		DB8E473E1919DACD0033CF59 /* RenderingEngine1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB8E473C1919DACD0033CF59 /* RenderingEngine1.cpp */; };
+		DB8E4747191A1B460033CF59 /* RenderingEngine2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB8E4745191A1B460033CF59 /* RenderingEngine2.cpp */; };
+		DB935D6C191CC2F800E89D95 /* Vector.hpp in Sources */ = {isa = PBXBuildFile; fileRef = DB935D6A191CC2F800E89D95 /* Vector.hpp */; };
+		DB935D70191CC32D00E89D95 /* Matrix.hpp in Sources */ = {isa = PBXBuildFile; fileRef = DB935D6E191CC32D00E89D95 /* Matrix.hpp */; };
+		DB935D73191CC34D00E89D95 /* Quaternion.hpp in Sources */ = {isa = PBXBuildFile; fileRef = DB935D71191CC34D00E89D95 /* Quaternion.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB8E47221919C55A0033CF59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB8E46F41919C55A0033CF59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB8E46FB1919C55A0033CF59;
+			remoteInfo = HelloArrow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB8E46FC1919C55A0033CF59 /* HelloCone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB8E46FF1919C55A0033CF59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB8E47011919C55A0033CF59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB8E47031919C55A0033CF59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB8E47071919C55A0033CF59 /* HelloCone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloCone-Info.plist"; sourceTree = "<group>"; };
+		DB8E47091919C55A0033CF59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB8E470B1919C55A0033CF59 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		DB8E470D1919C55A0033CF59 /* HelloCone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloCone-Prefix.pch"; sourceTree = "<group>"; };
+		DB8E470E1919C55A0033CF59 /* DLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAppDelegate.h; sourceTree = "<group>"; };
+		DB8E470F1919C55A0033CF59 /* DLAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DLAppDelegate.mm; sourceTree = "<group>"; };
+		DB8E47171919C55A0033CF59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DB8E471D1919C55A0033CF59 /* HelloConeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloConeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB8E471E1919C55A0033CF59 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DB8E47261919C55A0033CF59 /* HelloConeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloConeTests-Info.plist"; sourceTree = "<group>"; };
+		DB8E47281919C55A0033CF59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB8E472A1919C55A0033CF59 /* HelloConeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloConeTests.m; sourceTree = "<group>"; };
+		DB8E47341919C6590033CF59 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DB8E47361919C65E0033CF59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DB8E47381919C69B0033CF59 /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		DB8E47391919C69B0033CF59 /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = "<group>"; };
+		DB8E473B1919D40E0033CF59 /* IRenderingEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRenderingEngine.hpp; sourceTree = "<group>"; };
+		DB8E473C1919DACD0033CF59 /* RenderingEngine1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine1.cpp; sourceTree = "<group>"; };
+		DB8E4745191A1B460033CF59 /* RenderingEngine2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine2.cpp; sourceTree = "<group>"; };
+		DB8E474E191A38910033CF59 /* Simple.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Simple.frag; path = Shaders/Simple.frag; sourceTree = "<group>"; };
+		DB8E474F191A38910033CF59 /* Simple.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Simple.vert; path = Shaders/Simple.vert; sourceTree = "<group>"; };
+		DB935D6A191CC2F800E89D95 /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
+		DB935D6E191CC32D00E89D95 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
+		DB935D71191CC34D00E89D95 /* Quaternion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quaternion.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB8E46F91919C55A0033CF59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8E47371919C65E0033CF59 /* QuartzCore.framework in Frameworks */,
+				DB8E47351919C6590033CF59 /* OpenGLES.framework in Frameworks */,
+				DB8E47021919C55A0033CF59 /* CoreGraphics.framework in Frameworks */,
+				DB8E47041919C55A0033CF59 /* UIKit.framework in Frameworks */,
+				DB8E47001919C55A0033CF59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8E471A1919C55A0033CF59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8E471F1919C55A0033CF59 /* XCTest.framework in Frameworks */,
+				DB8E47211919C55A0033CF59 /* UIKit.framework in Frameworks */,
+				DB8E47201919C55A0033CF59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB8E46F31919C55A0033CF59 = {
+			isa = PBXGroup;
+			children = (
+				DB8E4749191A37D30033CF59 /* Shaders */,
+				DB8E47051919C55A0033CF59 /* HelloCone */,
+				DB8E47241919C55A0033CF59 /* HelloConeTests */,
+				DB8E46FE1919C55A0033CF59 /* Frameworks */,
+				DB8E46FD1919C55A0033CF59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB8E46FD1919C55A0033CF59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E46FC1919C55A0033CF59 /* HelloCone.app */,
+				DB8E471D1919C55A0033CF59 /* HelloConeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB8E46FE1919C55A0033CF59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E47361919C65E0033CF59 /* QuartzCore.framework */,
+				DB8E47341919C6590033CF59 /* OpenGLES.framework */,
+				DB8E46FF1919C55A0033CF59 /* Foundation.framework */,
+				DB8E47011919C55A0033CF59 /* CoreGraphics.framework */,
+				DB8E47031919C55A0033CF59 /* UIKit.framework */,
+				DB8E471E1919C55A0033CF59 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB8E47051919C55A0033CF59 /* HelloCone */ = {
+			isa = PBXGroup;
+			children = (
+				DB935D6D191CC31300E89D95 /* Models */,
+				DB8E470E1919C55A0033CF59 /* DLAppDelegate.h */,
+				DB8E470F1919C55A0033CF59 /* DLAppDelegate.mm */,
+				DB8E47381919C69B0033CF59 /* GLView.h */,
+				DB8E47391919C69B0033CF59 /* GLView.mm */,
+				DB8E473B1919D40E0033CF59 /* IRenderingEngine.hpp */,
+				DB8E473C1919DACD0033CF59 /* RenderingEngine1.cpp */,
+				DB8E4745191A1B460033CF59 /* RenderingEngine2.cpp */,
+				DB8E47171919C55A0033CF59 /* Images.xcassets */,
+				DB8E47061919C55A0033CF59 /* Supporting Files */,
+			);
+			name = HelloCone;
+			path = HelloArrow;
+			sourceTree = "<group>";
+		};
+		DB8E47061919C55A0033CF59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E47071919C55A0033CF59 /* HelloCone-Info.plist */,
+				DB8E47081919C55A0033CF59 /* InfoPlist.strings */,
+				DB8E470B1919C55A0033CF59 /* main.mm */,
+				DB8E470D1919C55A0033CF59 /* HelloCone-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB8E47241919C55A0033CF59 /* HelloConeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E472A1919C55A0033CF59 /* HelloConeTests.m */,
+				DB8E47251919C55A0033CF59 /* Supporting Files */,
+			);
+			name = HelloConeTests;
+			path = HelloArrowTests;
+			sourceTree = "<group>";
+		};
+		DB8E47251919C55A0033CF59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E47261919C55A0033CF59 /* HelloConeTests-Info.plist */,
+				DB8E47271919C55A0033CF59 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB8E4749191A37D30033CF59 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				DB8E474E191A38910033CF59 /* Simple.frag */,
+				DB8E474F191A38910033CF59 /* Simple.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		DB935D6D191CC31300E89D95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB935D6A191CC2F800E89D95 /* Vector.hpp */,
+				DB935D6E191CC32D00E89D95 /* Matrix.hpp */,
+				DB935D71191CC34D00E89D95 /* Quaternion.hpp */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB8E46FB1919C55A0033CF59 /* HelloCone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB8E472E1919C55A0033CF59 /* Build configuration list for PBXNativeTarget "HelloCone" */;
+			buildPhases = (
+				DB8E46F81919C55A0033CF59 /* Sources */,
+				DB8E46F91919C55A0033CF59 /* Frameworks */,
+				DB8E46FA1919C55A0033CF59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloCone;
+			productName = HelloArrow;
+			productReference = DB8E46FC1919C55A0033CF59 /* HelloCone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB8E471C1919C55A0033CF59 /* HelloConeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB8E47311919C55A0033CF59 /* Build configuration list for PBXNativeTarget "HelloConeTests" */;
+			buildPhases = (
+				DB8E47191919C55A0033CF59 /* Sources */,
+				DB8E471A1919C55A0033CF59 /* Frameworks */,
+				DB8E471B1919C55A0033CF59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB8E47231919C55A0033CF59 /* PBXTargetDependency */,
+			);
+			name = HelloConeTests;
+			productName = HelloArrowTests;
+			productReference = DB8E471D1919C55A0033CF59 /* HelloConeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB8E46F41919C55A0033CF59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "com.*";
+				TargetAttributes = {
+					DB8E471C1919C55A0033CF59 = {
+						TestTargetID = DB8E46FB1919C55A0033CF59;
+					};
+				};
+			};
+			buildConfigurationList = DB8E46F71919C55A0033CF59 /* Build configuration list for PBXProject "HelloCone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB8E46F31919C55A0033CF59;
+			productRefGroup = DB8E46FD1919C55A0033CF59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB8E46FB1919C55A0033CF59 /* HelloCone */,
+				DB8E471C1919C55A0033CF59 /* HelloConeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB8E46FA1919C55A0033CF59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8E47181919C55A0033CF59 /* Images.xcassets in Resources */,
+				DB8E470A1919C55A0033CF59 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8E471B1919C55A0033CF59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8E47291919C55A0033CF59 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB8E46F81919C55A0033CF59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB935D70191CC32D00E89D95 /* Matrix.hpp in Sources */,
+				DB8E47101919C55A0033CF59 /* DLAppDelegate.mm in Sources */,
+				DB8E473A1919C69B0033CF59 /* GLView.mm in Sources */,
+				DB935D6C191CC2F800E89D95 /* Vector.hpp in Sources */,
+				DB8E470C1919C55A0033CF59 /* main.mm in Sources */,
+				DB935D73191CC34D00E89D95 /* Quaternion.hpp in Sources */,
+				DB8E473E1919DACD0033CF59 /* RenderingEngine1.cpp in Sources */,
+				DB8E4747191A1B460033CF59 /* RenderingEngine2.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8E47191919C55A0033CF59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8E472B1919C55A0033CF59 /* HelloConeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB8E47231919C55A0033CF59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB8E46FB1919C55A0033CF59 /* HelloCone */;
+			targetProxy = DB8E47221919C55A0033CF59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB8E47081919C55A0033CF59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB8E47091919C55A0033CF59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB8E47271919C55A0033CF59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB8E47281919C55A0033CF59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB8E472C1919C55A0033CF59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DB8E472D1919C55A0033CF59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB8E472F1919C55A0033CF59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloArrow/HelloCone-Prefix.pch";
+				INFOPLIST_FILE = "HelloArrow/HelloCone-Info.plist";
+				PRODUCT_NAME = HelloCone;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB8E47301919C55A0033CF59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloArrow/HelloCone-Prefix.pch";
+				INFOPLIST_FILE = "HelloArrow/HelloCone-Info.plist";
+				PRODUCT_NAME = HelloCone;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DB8E47321919C55A0033CF59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloArrow.app/HelloArrow";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloArrow/HelloArrow-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HelloArrowTests/HelloConeTests-Info.plist";
+				PRODUCT_NAME = HelloConeTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DB8E47331919C55A0033CF59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloArrow.app/HelloArrow";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloArrow/HelloArrow-Prefix.pch";
+				INFOPLIST_FILE = "HelloArrowTests/HelloConeTests-Info.plist";
+				PRODUCT_NAME = HelloConeTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB8E46F71919C55A0033CF59 /* Build configuration list for PBXProject "HelloCone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB8E472C1919C55A0033CF59 /* Debug */,
+				DB8E472D1919C55A0033CF59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB8E472E1919C55A0033CF59 /* Build configuration list for PBXNativeTarget "HelloCone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB8E472F1919C55A0033CF59 /* Debug */,
+				DB8E47301919C55A0033CF59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB8E47311919C55A0033CF59 /* Build configuration list for PBXNativeTarget "HelloConeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB8E47321919C55A0033CF59 /* Debug */,
+				DB8E47331919C55A0033CF59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB8E46F41919C55A0033CF59 /* Project object */;
+}
