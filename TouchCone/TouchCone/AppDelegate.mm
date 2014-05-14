@@ -13,6 +13,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    
+    self.m_window = [[UIWindow alloc] initWithFrame:screenBounds];
+    m_view = [[GLView alloc] initWithFrame:screenBounds];
+    
+    [self.m_window addSubview:m_view];
+    [self.m_window makeKeyAndVisible];
+    
     return YES;
 }
 							

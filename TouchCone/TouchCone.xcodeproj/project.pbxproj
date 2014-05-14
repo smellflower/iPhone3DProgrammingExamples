@@ -11,16 +11,17 @@
 		DBD3FEB51922D8EC000B293B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB41922D8EC000B293B /* CoreGraphics.framework */; };
 		DBD3FEB71922D8EC000B293B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB61922D8EC000B293B /* UIKit.framework */; };
 		DBD3FEBD1922D8EC000B293B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD3FEBB1922D8EC000B293B /* InfoPlist.strings */; };
-		DBD3FEBF1922D8EC000B293B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEBE1922D8EC000B293B /* main.m */; };
-		DBD3FEC31922D8EC000B293B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEC21922D8EC000B293B /* AppDelegate.m */; };
+		DBD3FEBF1922D8EC000B293B /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEBE1922D8EC000B293B /* main.mm */; };
+		DBD3FEC31922D8EC000B293B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEC21922D8EC000B293B /* AppDelegate.mm */; };
 		DBD3FEC61922D8EC000B293B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD3FEC41922D8EC000B293B /* Main.storyboard */; };
-		DBD3FEC91922D8EC000B293B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEC81922D8EC000B293B /* ViewController.m */; };
 		DBD3FECB1922D8EC000B293B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD3FECA1922D8EC000B293B /* Images.xcassets */; };
 		DBD3FED21922D8EC000B293B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FED11922D8EC000B293B /* XCTest.framework */; };
 		DBD3FED31922D8EC000B293B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB21922D8EC000B293B /* Foundation.framework */; };
 		DBD3FED41922D8EC000B293B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB61922D8EC000B293B /* UIKit.framework */; };
 		DBD3FEDC1922D8EC000B293B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD3FEDA1922D8EC000B293B /* InfoPlist.strings */; };
 		DBD3FEDE1922D8EC000B293B /* TouchConeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEDD1922D8EC000B293B /* TouchConeTests.m */; };
+		DBD3FEE91922D935000B293B /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEE81922D935000B293B /* GLView.mm */; };
+		DBD3FEED1922D981000B293B /* RenderingEngine1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBD3FEEB1922D981000B293B /* RenderingEngine1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,19 +41,24 @@
 		DBD3FEB61922D8EC000B293B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBD3FEBA1922D8EC000B293B /* TouchCone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchCone-Info.plist"; sourceTree = "<group>"; };
 		DBD3FEBC1922D8EC000B293B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DBD3FEBE1922D8EC000B293B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBD3FEBE1922D8EC000B293B /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		DBD3FEC01922D8EC000B293B /* TouchCone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchCone-Prefix.pch"; sourceTree = "<group>"; };
 		DBD3FEC11922D8EC000B293B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DBD3FEC21922D8EC000B293B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBD3FEC21922D8EC000B293B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		DBD3FEC51922D8EC000B293B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBD3FEC71922D8EC000B293B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DBD3FEC81922D8EC000B293B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBD3FECA1922D8EC000B293B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBD3FED01922D8EC000B293B /* TouchConeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchConeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD3FED11922D8EC000B293B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DBD3FED91922D8EC000B293B /* TouchConeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchConeTests-Info.plist"; sourceTree = "<group>"; };
 		DBD3FEDB1922D8EC000B293B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBD3FEDD1922D8EC000B293B /* TouchConeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchConeTests.m; sourceTree = "<group>"; };
+		DBD3FEE71922D935000B293B /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		DBD3FEE81922D935000B293B /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = "<group>"; };
+		DBD3FEEA1922D963000B293B /* IRenderingEngine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IRenderingEngine.hpp; sourceTree = "<group>"; };
+		DBD3FEEB1922D981000B293B /* RenderingEngine1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine1.cpp; sourceTree = "<group>"; };
+		DBD3FEEF1922DB23000B293B /* Vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
+		DBD3FEF01922DB57000B293B /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
+		DBD3FEF11922DB77000B293B /* Quaternion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quaternion.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,14 @@
 		DBD3FEB81922D8EC000B293B /* TouchCone */ = {
 			isa = PBXGroup;
 			children = (
+				DBD3FEEE1922DB0F000B293B /* Models */,
 				DBD3FEC11922D8EC000B293B /* AppDelegate.h */,
-				DBD3FEC21922D8EC000B293B /* AppDelegate.m */,
+				DBD3FEC21922D8EC000B293B /* AppDelegate.mm */,
+				DBD3FEE71922D935000B293B /* GLView.h */,
+				DBD3FEE81922D935000B293B /* GLView.mm */,
+				DBD3FEEA1922D963000B293B /* IRenderingEngine.hpp */,
+				DBD3FEEB1922D981000B293B /* RenderingEngine1.cpp */,
 				DBD3FEC41922D8EC000B293B /* Main.storyboard */,
-				DBD3FEC71922D8EC000B293B /* ViewController.h */,
-				DBD3FEC81922D8EC000B293B /* ViewController.m */,
 				DBD3FECA1922D8EC000B293B /* Images.xcassets */,
 				DBD3FEB91922D8EC000B293B /* Supporting Files */,
 			);
@@ -128,7 +137,7 @@
 			children = (
 				DBD3FEBA1922D8EC000B293B /* TouchCone-Info.plist */,
 				DBD3FEBB1922D8EC000B293B /* InfoPlist.strings */,
-				DBD3FEBE1922D8EC000B293B /* main.m */,
+				DBD3FEBE1922D8EC000B293B /* main.mm */,
 				DBD3FEC01922D8EC000B293B /* TouchCone-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -150,6 +159,16 @@
 				DBD3FEDA1922D8EC000B293B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBD3FEEE1922DB0F000B293B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBD3FEEF1922DB23000B293B /* Vector.hpp */,
+				DBD3FEF01922DB57000B293B /* Matrix.hpp */,
+				DBD3FEF11922DB77000B293B /* Quaternion.hpp */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBD3FEC91922D8EC000B293B /* ViewController.m in Sources */,
-				DBD3FEC31922D8EC000B293B /* AppDelegate.m in Sources */,
-				DBD3FEBF1922D8EC000B293B /* main.m in Sources */,
+				DBD3FEC31922D8EC000B293B /* AppDelegate.mm in Sources */,
+				DBD3FEBF1922D8EC000B293B /* main.mm in Sources */,
+				DBD3FEED1922D981000B293B /* RenderingEngine1.cpp in Sources */,
+				DBD3FEE91922D935000B293B /* GLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
