@@ -12,7 +12,7 @@
 #import "GLView.h"
 #import "mach/mach_time.h"
 
-const bool ForceES1 = false;
+const bool ForceES1 = true;
 
 @implementation GLView
 
@@ -92,3 +92,30 @@ const bool ForceES1 = false;
     [m_context presentRenderbuffer:GL_RENDERBUFFER];
     
 }
+
+#pragma mark - Touch Delegate
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self];
+    m_renderingEngine->OnFingerUp(ivec2(location.x, location.y));
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self];
+    m_renderingEngine->OnFingerDown(ivec2(location.x, location.y));
+}
+
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    UITouch *touch = [touches anyObject];
+    CGPoint previous = [touch previousLocationInView:self];
+    CGPoint current = [touch locationInView:self];
+    m_renderingEngine->OnFingerMove(ivec2(previous.x, previous.y),
+                                    ivec2(current.x, current.y));
+}
+
+@end

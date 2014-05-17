@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0C72841926FC2B0076C1A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C72831926FC2B0076C1A4 /* QuartzCore.framework */; };
+		DB0C72861926FC330076C1A4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0C72851926FC330076C1A4 /* OpenGLES.framework */; };
+		DB0C72891926FD3D0076C1A4 /* RenderingEngine2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB0C72871926FD3D0076C1A4 /* RenderingEngine2.cpp */; };
+		DB0C728D1926FE4F0076C1A4 /* Simple.frag in Resources */ = {isa = PBXBuildFile; fileRef = DB0C728B1926FE4F0076C1A4 /* Simple.frag */; };
+		DB0C728E1926FE4F0076C1A4 /* Simple.vert in Resources */ = {isa = PBXBuildFile; fileRef = DB0C728C1926FE4F0076C1A4 /* Simple.vert */; };
 		DBD3FEB31922D8EC000B293B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB21922D8EC000B293B /* Foundation.framework */; };
 		DBD3FEB51922D8EC000B293B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB41922D8EC000B293B /* CoreGraphics.framework */; };
 		DBD3FEB71922D8EC000B293B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD3FEB61922D8EC000B293B /* UIKit.framework */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB0C72831926FC2B0076C1A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DB0C72851926FC330076C1A4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DB0C72871926FD3D0076C1A4 /* RenderingEngine2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderingEngine2.cpp; sourceTree = "<group>"; };
+		DB0C728B1926FE4F0076C1A4 /* Simple.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Simple.frag; path = Shaders/Simple.frag; sourceTree = "<group>"; };
+		DB0C728C1926FE4F0076C1A4 /* Simple.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Simple.vert; path = Shaders/Simple.vert; sourceTree = "<group>"; };
 		DBD3FEAF1922D8EC000B293B /* TouchCone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchCone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD3FEB21922D8EC000B293B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DBD3FEB41922D8EC000B293B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0C72861926FC330076C1A4 /* OpenGLES.framework in Frameworks */,
+				DB0C72841926FC2B0076C1A4 /* QuartzCore.framework in Frameworks */,
 				DBD3FEB51922D8EC000B293B /* CoreGraphics.framework in Frameworks */,
 				DBD3FEB71922D8EC000B293B /* UIKit.framework in Frameworks */,
 				DBD3FEB31922D8EC000B293B /* Foundation.framework in Frameworks */,
@@ -85,9 +97,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB0C728A1926FE2E0076C1A4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C728B1926FE4F0076C1A4 /* Simple.frag */,
+				DB0C728C1926FE4F0076C1A4 /* Simple.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
 		DBD3FEA61922D8EC000B293B = {
 			isa = PBXGroup;
 			children = (
+				DB0C728A1926FE2E0076C1A4 /* Shaders */,
 				DBD3FEB81922D8EC000B293B /* TouchCone */,
 				DBD3FED71922D8EC000B293B /* TouchConeTests */,
 				DBD3FEB11922D8EC000B293B /* Frameworks */,
@@ -107,6 +129,8 @@
 		DBD3FEB11922D8EC000B293B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB0C72851926FC330076C1A4 /* OpenGLES.framework */,
+				DB0C72831926FC2B0076C1A4 /* QuartzCore.framework */,
 				DBD3FEB21922D8EC000B293B /* Foundation.framework */,
 				DBD3FEB41922D8EC000B293B /* CoreGraphics.framework */,
 				DBD3FEB61922D8EC000B293B /* UIKit.framework */,
@@ -125,6 +149,7 @@
 				DBD3FEE81922D935000B293B /* GLView.mm */,
 				DBD3FEEA1922D963000B293B /* IRenderingEngine.hpp */,
 				DBD3FEEB1922D981000B293B /* RenderingEngine1.cpp */,
+				DB0C72871926FD3D0076C1A4 /* RenderingEngine2.cpp */,
 				DBD3FEC41922D8EC000B293B /* Main.storyboard */,
 				DBD3FECA1922D8EC000B293B /* Images.xcassets */,
 				DBD3FEB91922D8EC000B293B /* Supporting Files */,
@@ -249,7 +274,9 @@
 			files = (
 				DBD3FECB1922D8EC000B293B /* Images.xcassets in Resources */,
 				DBD3FEBD1922D8EC000B293B /* InfoPlist.strings in Resources */,
+				DB0C728E1926FE4F0076C1A4 /* Simple.vert in Resources */,
 				DBD3FEC61922D8EC000B293B /* Main.storyboard in Resources */,
+				DB0C728D1926FE4F0076C1A4 /* Simple.frag in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +299,7 @@
 				DBD3FEBF1922D8EC000B293B /* main.mm in Sources */,
 				DBD3FEED1922D981000B293B /* RenderingEngine1.cpp in Sources */,
 				DBD3FEE91922D935000B293B /* GLView.mm in Sources */,
+				DB0C72891926FD3D0076C1A4 /* RenderingEngine2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +504,7 @@
 				DBD3FEE31922D8EC000B293B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBD3FEE41922D8EC000B293B /* Build configuration list for PBXNativeTarget "TouchConeTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +513,7 @@
 				DBD3FEE61922D8EC000B293B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
