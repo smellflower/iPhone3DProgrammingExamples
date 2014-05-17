@@ -13,8 +13,6 @@
 #include "IRenderingEngine.hpp"
 #include "Quaternion.hpp"
 
-static const float AnimationDuration = 0.25f;
-
 using namespace std;
 
 struct Vertex {
@@ -212,7 +210,6 @@ void RenderingEngine1::OnFingerMove(ivec2 previous, ivec2 location) {
     if (direction.x > 0) {
         m_rotationAngle = -m_rotationAngle;
     }
-    
 }
 
 void RenderingEngine1::OnRotate(DeviceOrientation orientation) {

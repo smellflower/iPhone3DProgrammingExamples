@@ -47,6 +47,9 @@ public:
     void Render() const;
     void UpdateAnimation(float timeStep);
     void OnRotate(DeviceOrientation newOrientation);
+    void OnFingerUp(ivec2 location);
+    void OnFingerDown(ivec2 location);
+    void OnFingerMove(ivec2 oldLocation, ivec2 newLocation);
     
 private:
     GLuint BuildShader(const char* source, GLenum shaderType) const;
@@ -54,6 +57,12 @@ private:
     Animation m_animation;
     vector<Vertex> m_cone;
     vector<Vertex> m_disk;
+    
+    GLfloat m_rotationAngle;
+    GLfloat m_scale;
+    
+    ivec2 m_pivotPoint;
+    
     GLuint m_colorRenderbuffer;
     GLuint m_depthRenderbuffer;
     GLuint m_framebuffer;
@@ -62,11 +71,10 @@ private:
 
 IRenderingEngine* CreateRenderEngine2() {
     
-//    return new RenderingEngine2();
-    return NULL;
+    return new RenderingEngine2();
 }
 
-RenderingEngine2::RenderingEngine2() {
+RenderingEngine2::RenderingEngine2() : m_rotationAngle(0), m_scale(1) {
     
     //Create & bind the color buffer so that the caller can allocate its space.
     glGenRenderbuffers(1, &m_colorRenderbuffer);
@@ -74,6 +82,8 @@ RenderingEngine2::RenderingEngine2() {
 }
 
 void RenderingEngine2::Initialize(int width, int height) {
+    
+    m_pivotPoint = ivec2(width / 2, height / 2);
     
     const float coneRadius = 0.5f;
     const float coneHeight = 1.866f;
@@ -178,13 +188,14 @@ void RenderingEngine2::Render() const {
     glEnableVertexAttribArray(positionSlot);
     glEnableVertexAttribArray(colorSlot);
     
-    mat4 rotation(m_animation.Current.ToMatrix());
+    mat4 rotation = mat4::Rotate(m_rotationAngle);
+    mat4 scale = mat4::Scale(m_scale);
     mat4 translation = mat4::Translate(0, 0, -7);
     
     //Set the model-view matrix.
     GLint modelViewUniform = glGetUniformLocation(m_simpleProgram, "ModelView");
     
-    mat4 modelviewMatrix = rotation * translation;
+    mat4 modelviewMatrix = scale * rotation * translation;
     glUniformMatrix4fv(modelViewUniform, 1, 0, modelviewMatrix.Pointer());
     
     //Draw the cone.
@@ -212,62 +223,36 @@ void RenderingEngine2::Render() const {
     glDisableVertexAttribArray(colorSlot);
 }
 
+void RenderingEngine2::OnFingerUp(ivec2 location) {
+
+    m_scale = 1.0f;
+}
+
+void RenderingEngine2::OnFingerDown(ivec2 location) {
+
+    m_scale = 1.5f;
+}
+
+void RenderingEngine2::OnFingerMove(ivec2 previous, ivec2 location) {
+
+    vec2 direction = vec2(location - m_pivotPoint).Normalized();
+    
+    direction.y = -direction.y;
+
+    m_rotationAngle = std::acos(direction.y) * 180.0f / 3.14159f;
+    
+    if (direction.x > 0) {
+        m_rotationAngle = -m_rotationAngle;
+    }
+}
+
 void RenderingEngine2::UpdateAnimation(float timeStep) {
     
-    if (m_animation.Current == m_animation.End) {
-        return;
-    }
-    
-    m_animation.Elapsed += timeStep;
-    if (m_animation.Elapsed >= AnimationDuration) {
-        
-        m_animation.Current = m_animation.End;
-    } else {
-        
-        float mu = m_animation.Elapsed / AnimationDuration;
-        m_animation.Current = m_animation.Start.Slerp(mu, m_animation.End);
-    }
 }
 
 void RenderingEngine2::OnRotate(DeviceOrientation newOrientation) {
     
-    vec3 direction;
-    
-    switch (newOrientation) {
-        case DeviceOrientationUnknown:
-        case DeviceOrientationPortrait:
-            direction = vec3(0, 1, 0);
-            break;
-            
-        case DeviceOrientationPortraitUpsideDown:
-            direction = vec3(0, -1, 0);
-            break;
-            
-        case DeviceOrientationLandscapeRight:
-            direction = vec3(-1, 0, 0);
-            break;
-            
-        case DeviceOrientationLandscapeLeft:
-            direction = vec3(1, 0, 0);
-            break;
-            
-        case DeviceOrientationFaceUp:
-            direction = vec3(0, 0, 1);
-            break;
-            
-        case DeviceOrientationFaceDown:
-            direction = vec3(0, 0 , -1);
-            break;
-            
-        default:
-            break;
-    }
-    m_animation.Elapsed = 0;
-    m_animation.Start = m_animation.Current = m_animation.End;
-    m_animation.End = Quaternion::CreateFromVectors(vec3(0, 1, 0), direction);
 }
-
-
 
 GLuint RenderingEngine2::BuildShader(const char* source, GLenum shaderType) const {
     
