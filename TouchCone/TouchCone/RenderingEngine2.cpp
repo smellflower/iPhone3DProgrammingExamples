@@ -99,7 +99,7 @@ void RenderingEngine2::Initialize(int width, int height) {
     vector<Vertex>::iterator vertex = m_coneVertices.begin();
     
     // Cone body
-    for (int theta = 0; vertex != m_coneVertices.end() - 1; theta += dtheta) {
+    for (float theta = 0; vertex != m_coneVertices.end() - 1; theta += dtheta) {
         
         float brightness = abs(sin(theta));
         vec4 color(brightness, brightness, brightness, 1);
@@ -111,11 +111,12 @@ void RenderingEngine2::Initialize(int width, int height) {
         vertex->Position.x = coneRadius * cos(theta);
         vertex->Position.y = 1 - coneHeight;
         vertex->Position.z = coneRadius * sin(theta);
+        vertex->Color = color;
         vertex++;
     }
     
     // Cone disk center
-    vertex->Position = vec3(0, 1- coneHeight, 1);
+    vertex->Position = vec3(0, 1- coneHeight, 0);
     vertex->Color = vec4(1, 1, 1, 1);
     
     // Indices
@@ -139,7 +140,7 @@ void RenderingEngine2::Initialize(int width, int height) {
         
         *index++ = diskCenterIndex;
         *index++ = i;
-        *index++ = (i + 1) % (coneSlices * 2);
+        *index++ = (i + 2) % (coneSlices * 2);
     }
     
     // Create depth buffer
