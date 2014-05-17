@@ -12,7 +12,7 @@
 #import "GLView.h"
 #import "mach/mach_time.h"
 
-const bool ForceES1 = false;
+const bool ForceES1 = true;
 
 @implementation GLView
 
